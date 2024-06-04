@@ -209,7 +209,7 @@ Grow = (arr) => {
     }
     return true
 }
-console.log(Grow([1, 2, 3, 4, 5]))
+console.log(Grow([1, 2, 3, 4, 6]))
 // 4. 
 //     HackerLand University has the following grading policy:
 //         - Every student receives a  in the inclusive range from  to .
