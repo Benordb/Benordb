@@ -25,7 +25,7 @@
 // //   return min
 // // }
 // // const list = [-20, -2, -4, -2, -7]
-
+//ben
 // // const MaxIndex = (arr) => {
 // //     let max = arr[0];
 // //     let index;
