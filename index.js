@@ -301,8 +301,53 @@ const callback = (call) => {
 }
 callback(func)
 useMap = (grade) => {
-    return grade.map((n) =>  n % 5 < 3 ?  n=(n + 5 - n % 5) :  n )
+    return grade.map((n) => n % 5 < 3 ? n = (n + 5 - n % 5) : n)
 }
 console.log()
-let inde=0;
-console.log(useMap([56,43,41,99]).filter((el,index)=>el%2===0 ? inde=index : false))
+let inde = 0;
+console.log(useMap([56, 43, 41, 99]).filter((el, index) => el % 2 === 0 ? inde = index : false))
+
+// Өгөгдсөн массивын гишүүдийн нийлбэрийг ол.
+const arr = [-8, 598, 4, -3, -73, 3, 2, 9];
+// console.log(arr.reduce((n, m) => n + m, 0))
+// Өгөгдсөн массивын 0-ээс их элементүүдийн нийлбэрийг ол.
+// console.log(arr.reduce((n, m) => {
+//     console.log(`n==${n}`)
+//     console.log(`m==${m}`)
+//     if (m > 0) {
+//         return m + n
+//     }
+//     return n
+// }, 0))
+// Өгөгдсөн массивын хамгийн бага элементийг ол.
+min = arr[0]
+arr.map((n) => n < min ? min = n : n)
+console.log(min)
+// Өгөгдсөн массивын хамгийн их элемент хэд дэх нь вэ? Хэрэв хамгийн их элементийн тоо 1-ээс олон бол бага дугаарыг нь хэвлэнэ.
+max = 0
+arr.map((n, index) => arr[max] < n ? max = index : n)
+console.log(max)
+// 1. Өгөгдсөн Массивийн элэментүүдийг эсрэг дарааллаар буцаа
+console.log(arr.reverse())
+// 2. Хөрш элэментүүдээсээ их буюу орой элэментүүдийн тоог буцаа
+
+// 3. Өгөгдсөн массивийн бүх хосыг хэвлэ
+
+// 4. Массив болон тоо өгөгдөв. Нийлбэр нь өгөгдсөн тоотой тэнцүү байдаг хосын тоог ол
+// 5. Өгөгдсөн 2 массивийн огтлолцлыг ол
+// 6. Өгөгдсөн массивийн сөрөг тоонуудыг зүүн талд нь байрлуул
+// 7. Дараалсан тоонуудаас бүрдэх массив өгөгдөх байсан боловч 1 тоо нь дутуу байв. Тэр тоог ол
+const arr3 = [-3,-1,0,1, 2, 3, 4,5, 6, 7]
+let too = 0;
+console.log(arr3.filter((n, index) => {
+    if (arr3.length-1==index) {
+        return false
+    } else if (n + 1 !== arr3[index + 1]) {
+        too = n
+        return true
+    }
+    return false
+}))
+console.log(too+1)
+
+//forEach() map()-үйлдэл хийгээд тэр массиваа буцаана reduce()утга буцаана үйлдэл хийгэд filter()-
