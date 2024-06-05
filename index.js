@@ -162,55 +162,55 @@
 
 // 1. Массив болон тоо өгөгдөв. Өгөгдсөн тоо массив байгаа бол дугаарыг нь, байхгүй бол -1 буцаа
 
-Negative = (arr, n) => {
-    for (let i = 0; i < arr.length; i++) {
-        if (arr[i] == n) {
-            return i;
-        }
-    }
-    return -1;
-}
+// Negative = (arr, n) => {
+//     for (let i = 0; i < arr.length; i++) {
+//         if (arr[i] == n) {
+//             return i;
+//         }
+//     }
+//     return -1;
+// }
 
-// 2. Өгөгдсөн массивын элементүүдийг хойш нь нэг цикл шилжилт хий. Өөрөөр хэлбэл 1-рийг 2-рт, 2-рыг 3-рт, гэх мэт сүүлийн элементийг 1-рт тус тус шилжүүл.
-//     Жич: 1 2 3 4 5 -> 5 1 2 3 4
+// // 2. Өгөгдсөн массивын элементүүдийг хойш нь нэг цикл шилжилт хий. Өөрөөр хэлбэл 1-рийг 2-рт, 2-рыг 3-рт, гэх мэт сүүлийн элементийг 1-рт тус тус шилжүүл.
+// //     Жич: 1 2 3 4 5 -> 5 1 2 3 4
 
-NextArr = (arr) => {
-    let next = 0;
-    let z = 0;
-    for (let i = 0; i < arr.length; i++) {
-        next = arr[i];
-        arr[i] = z;
-        z = next;
-        if (arr.length > i) {
-            arr[0] = z;
-        }
-    }
-    return arr
-}
-NextArr1 = arr => {
-    let temp = 0;
-    for (let i = arr.length - 1; i > 0; i--) {
-        temp = arr[i];
-        arr[i] = arr[i - 1];
-        arr[i - 1] = temp;
-    }
-    return arr
-}
-console.log(NextArr([0, 1, 2, 3, 4]))
-console.log(NextArr1([0, 1, 2, 3, 4]))
-// 3. Өгөгдсөн массив өсөх эрэмбээр байвал true үгүй бол false буцаа
+// NextArr = (arr) => {
+//     let next = 0;
+//     let z = 0;
+//     for (let i = 0; i < arr.length; i++) {
+//         next = arr[i];
+//         arr[i] = z;
+//         z = next;
+//         if (arr.length > i) {
+//             arr[0] = z;
+//         }
+//     }
+//     return arr
+// }
+// NextArr1 = arr => {
+//     let temp = 0;
+//     for (let i = arr.length - 1; i > 0; i--) {
+//         temp = arr[i];
+//         arr[i] = arr[i - 1];
+//         arr[i - 1] = temp;
+//     }
+//     return arr
+// }
+// console.log(NextArr([0, 1, 2, 3, 4]))
+// console.log(NextArr1([0, 1, 2, 3, 4]))
+// // 3. Өгөгдсөн массив өсөх эрэмбээр байвал true үгүй бол false буцаа
 
-Grow = (arr) => {
-    let count = arr[1] - arr[0];
-    for (let i = 0; i < arr.length - 1; i++) {
-        if (arr[i] !== arr[i + 1] - 1) {
-            return false
-        }
-    }
-    return true
-}
-console.log(Grow([1, 2, 3, 4, 6]))
-// 4. 
+// Grow = (arr) => {
+//     let count = arr[1] - arr[0];
+//     for (let i = 0; i < arr.length - 1; i++) {
+//         if (arr[i] !== arr[i + 1] - 1) {
+//             return false
+//         }
+//     }
+//     return true
+// }
+// console.log(Grow([1, 2, 3, 4, 6]))
+// // 4. 
 //     HackerLand University has the following grading policy:
 //         - Every student receives a  in the inclusive range from  to .
 //         - Any  less than  is a failing grade.
@@ -222,33 +222,33 @@ console.log(Grow([1, 2, 3, 4, 6]))
 //     28 - do not round (result is less than 40)
 //     57 - do not round (60 - 57 is 3 or higher)
 //     Given the initial value of  for each of Sam's  students, write code to automate the rounding process.
-University = (grade) => {
-    if (grade > 0 && grade <= 100) {
-        if (grade == 100) {
-            return `${grade} - ${grade} congratulation🥳 University has very very easy🤣🥳🔥`
-        } else if (grade < 40) {
-            return "result is less than 40"
-        } else if (grade % 5 < 3) {
-            return `${grade + 5 - grade % 5} - ${grade} is 3 or higher`
-        } else {
-            return `${grade + 5 - grade % 5} - ${grade} is less than 3`
-        }
-    }
-    return "grade range is 0-100"
-}
+// University = (grade) => {
+//     if (grade > 0 && grade <= 100) {
+//         if (grade == 100) {
+//             return `${grade} - ${grade} congratulation🥳 University has very very easy🤣🥳🔥`
+//         } else if (grade < 40) {
+//             return "result is less than 40"
+//         } else if (grade % 5 < 3) {
+//             return `${grade + 5 - grade % 5} - ${grade} is 3 or higher`
+//         } else {
+//             return `${grade + 5 - grade % 5} - ${grade} is less than 3`
+//         }
+//     }
+//     return "grade range is 0-100"
+// }
 
-console.log(University(100))
-Univ = (arr) => {
-    for (let i = 0; i < arr.length; i++) {
-        if (arr[i] < 40) {
-            arr[i] = arr[i]
-        } else if ((arr[i] % 5) >= 3) {
-            arr[i] = arr[i] + 5 - arr[i] % 5
-        }
-    }
-    return arr
-}
-console.log(Univ([87, 77, 3, 99, 90, 91]))
+// console.log(University(100))
+// Univ = (arr) => {
+//     for (let i = 0; i < arr.length; i++) {
+//         if (arr[i] < 40) {
+//             arr[i] = arr[i]
+//         } else if ((arr[i] % 5) >= 3) {
+//             arr[i] = arr[i] + 5 - arr[i] % 5
+//         }
+//     }
+//     return arr
+// }
+// console.log(Univ([87, 77, 3, 99, 90, 91]))
 // Mix=(arr)=>{
 //     min=arr[0];
 //     max=arr[0];
@@ -283,32 +283,32 @@ console.log(Univ([87, 77, 3, 99, 90, 91]))
 //     if (i == 8) break;
 //     console.log(i)
 // }
-const list = [5, 4, 3, 2, 9];
-list.reverse().forEach((el, index) => { console.log(el, index) })
-let max = list[0];
-list.forEach((n) => { if (max < n) max = n })
-list.forEach((n) => { if (max < n) max = n })
-console.log(max)
+// const list = [5, 4, 3, 2, 9];
+// list.reverse().forEach((el, index) => { console.log(el, index) })
+// let max = list[0];
+// list.forEach((n) => { if (max < n) max = n })
+// list.forEach((n) => { if (max < n) max = n })
+// console.log(max)
 
 
 
 
-const func = (consle) => {
-    console.log(consle)
-}
-const callback = (call) => {
-    call("Hello")
-}
-callback(func)
-useMap = (grade) => {
-    return grade.map((n) => n % 5 < 3 ? n = (n + 5 - n % 5) : n)
-}
-console.log()
-let inde = 0;
-console.log(useMap([56, 43, 41, 99]).filter((el, index) => el % 2 === 0 ? inde = index : false))
+// const func = (consle) => {
+//     console.log(consle)
+// }
+// const callback = (call) => {
+//     call("Hello")
+// }
+// callback(func)
+// useMap = (grade) => {
+//     return grade.map((n) => n % 5 < 3 ? n = (n + 5 - n % 5) : n)
+// }
+// console.log()
+// let inde = 0;
+// console.log(useMap([56, 43, 41, 99]).filter((el, index) => el % 2 === 0 ? inde = index : false))
 
 // Өгөгдсөн массивын гишүүдийн нийлбэрийг ол.
-const arr = [-8, 598, 4, -3, -73, 3, 2, 9];
+// const arr = [-8, 598, 4, -3, -73, 3, 2, 9];
 // console.log(arr.reduce((n, m) => n + m, 0))
 // Өгөгдсөн массивын 0-ээс их элементүүдийн нийлбэрийг ол.
 // console.log(arr.reduce((n, m) => {
@@ -320,15 +320,15 @@ const arr = [-8, 598, 4, -3, -73, 3, 2, 9];
 //     return n
 // }, 0))
 // Өгөгдсөн массивын хамгийн бага элементийг ол.
-min = arr[0]
-arr.map((n) => n < min ? min = n : n)
-console.log(min)
+// min = arr[0]
+// arr.map((n) => n < min ? min = n : n)
+// console.log(min)
 // Өгөгдсөн массивын хамгийн их элемент хэд дэх нь вэ? Хэрэв хамгийн их элементийн тоо 1-ээс олон бол бага дугаарыг нь хэвлэнэ.
-max = 0
-arr.map((n, index) => arr[max] < n ? max = index : n)
-console.log(max)
+// max = 0
+// arr.map((n, index) => arr[max] < n ? max = index : n)
+// console.log(max)
 // 1. Өгөгдсөн Массивийн элэментүүдийг эсрэг дарааллаар буцаа
-console.log(arr.reverse())
+// console.log(arr.reverse())
 // 2. Хөрш элэментүүдээсээ их буюу орой элэментүүдийн тоог буцаа
 
 // 3. Өгөгдсөн массивийн бүх хосыг хэвлэ
@@ -337,17 +337,50 @@ console.log(arr.reverse())
 // 5. Өгөгдсөн 2 массивийн огтлолцлыг ол
 // 6. Өгөгдсөн массивийн сөрөг тоонуудыг зүүн талд нь байрлуул
 // 7. Дараалсан тоонуудаас бүрдэх массив өгөгдөх байсан боловч 1 тоо нь дутуу байв. Тэр тоог ол
-const arr3 = [-3,-1,0,1, 2, 3, 4,5, 6, 7]
-let too = 0;
-console.log(arr3.filter((n, index) => {
-    if (arr3.length-1==index) {
-        return false
-    } else if (n + 1 !== arr3[index + 1]) {
-        too = n
-        return true
-    }
-    return false
-}))
-console.log(too+1)
+// const arr3 = [-3,-1,0,1, 2, 3, 4,5, 6, 7]
+// let too = 0;
+// console.log(arr3.filter((n, index) => {
+//     if (arr3.length-1==index) {
+//         return false
+//     } else if (n + 1 !== arr3[index + 1]) {
+//         too = n
+//         return true
+//     }
+//     return false
+// }))
+// console.log(too+1)
 
 //forEach() map()-үйлдэл хийгээд тэр массиваа буцаана reduce()утга буцаана үйлдэл хийгэд filter()-
+// const arr = [4, 23, -3,4,5, 7, 2]
+// const swap = (arr, i, j) => {
+//     let temp = arr[i];
+//     arr[i] = arr[j];
+//     arr[j] = temp;
+// }
+// const findMinIndex=(arr,start)=>{
+//     let minIndex=start;
+//     for(let i=start+1;i<arr.length;i++){
+//         if(arr[i]<arr[minIndex]){
+//             minIndex=i
+//         }
+//     }
+//     return minIndex
+// }
+// const bubbleSort = (arr) => {
+//     for (let i = 0; i < arr.length; i++) {
+//         for (let j = 0; j < arr.length - i-1; j++) {
+//             arr[j]>arr[j+1] ? swap(arr, j, j + 1) : i
+//         }
+//     }
+//     console.log(arr)
+// }
+// const selectionSort=(arr)=>{
+//     for(let i=0;i<arr.length;i++){
+//         swap(arr,i,findMinIndex(arr,i))
+//     }
+// }
+// selectionSort(arr)
+// console.log(arr)
+
+const arr=["b","d","c"];
+console.log(arr.sort((a,b)=>a>b ? 1 : b>a ? -1 : 0))
