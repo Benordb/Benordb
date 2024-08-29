@@ -7,12 +7,6 @@ I'm fullstack developer
 * 🌍  I'm based in Mongolia
 * ✉️  You can contact me at [baynaabj749@gmail.com](mailto:baynaabj749@gmail.com)
 
-### Skills
-
-
-<p align="left"> <a href="https://github.com/thinkright20"><img src="https://skillicons.dev/icons?i=vscode,replit,github,mongodb,css,html,js,express,bots,nodejs"> </a> </p>
-
-
 ### Socials
 
 <p align="center">
@@ -31,6 +25,11 @@ I'm fullstack developer
    <a href="https://github.com/thinkright20"><img alt="followers" title="Follow me on Github" src="https://img.shields.io/github/followers/benordb?color=236ad3&style=for-the-badge&logo=github&label=Follow"/></a>
 
  </p>
+
+ ### Skills
+
+<p align="left"> <a href="https://github.com/thinkright20"><img src="https://skillicons.dev/icons?i=vscode,replit,github,mongodb,css,html,js,express,bots,nodejs,c#"> </a> </p>
+
 ### Badges
 
 <b>My GitHub Stats</b>
