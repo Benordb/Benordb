@@ -3,6 +3,14 @@ Hi ![](https://user-images.githubusercontent.com/18350557/176309783-0785949b-912
 
 I'm fullstack developer
 -----------------------
+<p align="left">
+<a href="https://www.github.com/benordb" target="_blank" rel="noreferrer">
+  <img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/socials/github.svg" width="32" height="32" alt="GitHub" />
+</a>
+<a href="http://www.instagram.com/benordb" target="_blank" rel="noreferrer">
+  <img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/socials/instagram.svg" width="32" height="32" alt="Instagram" />
+</a>
+</p>
 
 *   🌍  I'm based in Mongolia
 *   ✉️  You can contact me at [baynaabj749@gmail.com](mailto:baynaabj749@gmail.com)### Skills 
