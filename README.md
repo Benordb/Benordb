@@ -28,7 +28,7 @@ I'm fullstack developer
 
  ### Skills
 
-<p align="left"> <a href="https://github.com/thinkright20"><img src="https://skillicons.dev/icons?i=vscode,replit,github,mongodb,css,html,js,express,bots,nodejs,c#"> </a> </p>
+<p align="left"> <a href="https://github.com/thinkright20"><img src="https://skillicons.dev/icons?i=vscode,github,nextjs,dotnet,css,html,js,ts,cs,tailwind,express,nodejs"> </a> </p>
 
 ### Badges
 
